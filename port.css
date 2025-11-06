@@ -1,0 +1,256 @@
+:root {
+    --bg: #0f172a;
+    --text: #e2e8f0;
+    --accent: #38bdf8;
+    --card: #1e293b;
+}
+
+.light {
+    --bg: #f8fafc;
+    --text: #0f172a;
+    --accent: #2563eb;
+    --card: #e2e8f0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: var(--bg);
+    color: var(--text);
+    transition: 0.3s ease;
+    cursor:url(https://www.vecteezy.com/png/43371472-3d-computer-mouse-cursor-arrow-icon) auto;
+    
+    
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    background: var(--card);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header h1 {
+    color: var(--accent);
+}
+
+nav a {
+    margin: 0 10px;
+    color: var(--text);
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: var(--accent);
+}
+
+.hire-btn {
+    background: var(--accent);
+    color: var(--bg);
+    padding: 8px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+}
+#btn{
+     background: #445244;
+    color: #faa307;
+    padding: 8px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+}
+#btn:hover{
+    text-decoration: underline;
+    
+}
+.controls button {
+    margin-left: 10px;
+    background: var(--accent);
+    border: none;
+    color: var(--bg);
+    padding: 6px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+/* Hero */
+.hero {
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-image: url('hero.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.hero .profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 3px solid var(--accent);
+    margin-bottom: 20px;
+}
+
+.hero h2 span {
+    color: white;
+}
+
+.btn {
+    background: var(--accent);
+    color: var(--bg);
+    padding: 10px 25px;
+    border-radius: 25px;
+    display: inline-block;
+    margin-top: 20px;
+    text-decoration: none;
+    filter: drop-shadow(1px 1px 20px #8ecae6);
+}
+.social {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.social img {
+  width: 30px;
+  height: 30px;
+  transition: transform 0.3s ease;
+}
+
+.social img:hover {
+  transform: scale(1.2);
+}
+
+
+/* Sections */
+section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+h2 {
+    margin-bottom: 30px;
+    color: var(--accent);
+}
+
+/* Skills */
+.skills-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.skill {
+    background: var(--card);
+    padding: 20px;
+    border-radius: 10px;
+    width: 120px;
+    transition: 0.3s;
+}
+
+.skill:hover {
+    transform: scale(1.05);
+    background: #222;
+}
+
+.skill img {
+    width: 50px;
+    height: 50px;
+}
+
+.skill p {
+    margin-top: 10px;
+}
+
+/* Projects */
+.projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+}
+
+.project {
+    background: var(--card);
+    padding: 25px;
+    border-radius: 10px;
+    width: 300px;
+    transition: 0.3s;
+}
+
+.project:hover {
+    transform: translateY(-5px);
+    background: #222;
+}
+
+/* Contact */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    max-width: 400px;
+    margin: auto;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background: #222;
+    color: white;
+}
+input:focus+label{
+    transform: translateY(-20px);
+    color: #0077b6;
+}
+input:focus{
+    outline-color:#0077b6 ;
+}
+
+button {
+    background: var(--accent);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+
+/* Footer */
+footer {
+    background: var(--card);
+    padding: 15px;
+    text-align: center;
+    color: #888;
+}
+
+/* Responsive */
+@media(max-width:768px) {
+    header {
+        flex-direction: column;
+    }
+
+    section {
+        padding: 40px 20px;
+    }
+}
